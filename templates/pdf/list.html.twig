@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}PDF Generator List{% endblock %}
+
+{% block body %}
+
+<div class="container">
+	<h4>PDF Generator List</h3>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th scope="col">Id</th>
+				<th scope="col">Name</th>
+				<th scope="col">Path</th>
+				<th scope="col">Created On</th>
+				<th scope="col">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% set count = 1 %}
+			{% for pdf in pdfList %}
+			<tr>
+				<th scope="row">{{count}}</th>
+				<td>{{pdf.name}}</td>
+				<td>{{pdf.path}}</td>
+				<td>{{pdf.createdOn|date('Y-m-d H:i:s')}}</td>
+				<td>
+					<button type="button" class="btn btn-info" id="downloadPdfBtn" data-filepath={{pdf.downloadPath}}>Download</button>
+				</td>
+			</tr>
+			{% set count = count +1 %}
+			{% endfor %}
+
+
+			
+		</tbody>
+	</table>
+
+</div>
+{% endblock %}

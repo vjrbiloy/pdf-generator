@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<h4>{{title}}</h3>
+		<hr/>
+		<form action="/pdf/generate" method="post" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="inputName">Name:</label>
+				<input type="text" class="form-control" id="inputName" name="inputName" required>
+			</div>
+			<div class="form-group">
+				<label for="inputEmail">Email:</label>
+				<input type="email" class="form-control" id="inputEmail" name="inputEmail" aria-describedby="emailHelp" required>
+			</div>
+			<div class="form-group">
+				<label for="inputMobileNumber">Mobile Number:</label>
+				<input type="number" class="form-control" id="inputMobileNumber" name="inputMobileNumber" required>
+			</div>
+
+			<div class="div-user-photos">
+				<label >Photos:</label>
+				<div class="form-group">
+					<input type="file" class="form-control-file photos" name="inputPhoto[]">
+				</div>
+			</div>
+			
+
+			<button type="button" class="btn btn-info" id="addPhotoBtn">Add More Photo</button>
+			<button type="submit" class="btn btn-primary">Generate PDF</button>
+		</form>
+	</div>
+
+	
+
+{% endblock %}
