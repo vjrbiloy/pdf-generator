@@ -55,10 +55,11 @@ CREATE TABLE IF NOT EXISTS `pdf` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pdf_generation.pdf: ~3 rows (approximately)
+-- Dumping data for table pdf_generation.pdf: ~1 rows (approximately)
 /*!40000 ALTER TABLE `pdf` DISABLE KEYS */;
 INSERT INTO `pdf` (`id`, `name`, `path`, `download_path`, `created_on`) VALUES
-	(1, '231123022307924348.pdf', './pdf/231123022307924348.pdf', 'http://127.0.0.1:8000/pdf/231123022307924348.pdf', '2023-11-23 02:23:07');
+	(1, '231123022307924348.pdf', './pdf/231123022307924348.pdf', 'http://127.0.0.1:8000/pdf/231123022307924348.pdf', '2023-11-23 02:23:07'),
+	(2, '231123030902343999.pdf', './pdf/231123030902343999.pdf', 'http://127.0.0.1:8000/pdf/231123030902343999.pdf', '2023-11-23 03:09:02');
 /*!40000 ALTER TABLE `pdf` ENABLE KEYS */;
 
 -- Dumping structure for table pdf_generation.photo
@@ -70,14 +71,19 @@ CREATE TABLE IF NOT EXISTS `photo` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pdf_generation.photo: ~32 rows (approximately)
+-- Dumping data for table pdf_generation.photo: ~5 rows (approximately)
 /*!40000 ALTER TABLE `photo` DISABLE KEYS */;
 INSERT INTO `photo` (`id`, `name`, `path`, `user_id`) VALUES
 	(1, 'sample.jpg', './img/upload/231123022307988912.webp', 1),
 	(2, 'sample.jpg', './img/upload/231123022307860369.webp', 1),
 	(3, 'sample.jpg', './img/upload/231123022307623276.webp', 1),
 	(4, 'sample.jpg', './img/upload/231123022307344246.webp', 1),
-	(5, 'sample.jpg', './img/upload/231123022307497723.webp', 1);
+	(5, 'sample.jpg', './img/upload/231123022307497723.webp', 1),
+	(6, 'sample.jpg', './img/upload/231123030901516488.webp', 2),
+	(7, 'sample.jpg', './img/upload/231123030902378060.webp', 2),
+	(8, 'sample.jpg', './img/upload/231123030902711850.webp', 2),
+	(9, 'sample.jpg', './img/upload/231123030902833217.webp', 2),
+	(10, 'sample.jpg', './img/upload/231123030902250906.webp', 2);
 /*!40000 ALTER TABLE `photo` ENABLE KEYS */;
 
 -- Dumping structure for table pdf_generation.user
@@ -89,10 +95,11 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pdf_generation.user: ~15 rows (approximately)
+-- Dumping data for table pdf_generation.user: ~1 rows (approximately)
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` (`id`, `name`, `email`, `mobile_number`) VALUES
-	(1, 'Biloy, Victorio Jr', 'vjrbiloy@email.com', '09192832212');
+	(1, 'Biloy, Victorio Jr', 'vjrbiloy@email.com', '09192832212'),
+	(2, 'Acosta, Jocylene', 'jhoi@email.com', '21323122');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
